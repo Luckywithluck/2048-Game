@@ -1,0 +1,81 @@
+body {
+  background: #f7f7f7;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+  background: #ffffff;
+  padding: 2rem 2rem;
+  border-radius: 24px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+  transition: all 0.3s ease-in-out;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+button#new-game-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  background: #8f7a66;
+  color: #f9f6f2;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button#new-game-btn:hover {
+  background: #776e65;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  background: #bbada0;
+  padding: 12px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+}
+
+.box {
+  background: #cdc1b4;
+  border-radius: 8px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #776e65;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  transition: all 0.15s ease-in-out;
+}
+
+.box[data-value="2"]    { background: #eee4da; color: #776e65; }
+.box[data-value="4"]    { background: #ede0c8; color: #776e65; }
+.box[data-value="8"]    { background: #f2b179; color: #f9f6f2; }
+.box[data-value="16"]   { background: #f59563; color: #f9f6f2; }
+.box[data-value="32"]   { background: #f67c5f; color: #f9f6f2; }
+.box[data-value="64"]   { background: #f65e3b; color: #f9f6f2; }
+.box[data-value="128"]  { background: #edcf72; color: #f9f6f2; font-size: 2rem; }
+.box[data-value="256"]  { background: #edcc61; color: #f9f6f2; font-size: 2rem; }
+.box[data-value="512"]  { background: #edc850; color: #f9f6f2; font-size: 2rem; }
+.box[data-value="1024"] { background: #edc53f; color: #f9f6f2; font-size: 1.8rem; }
+.box[data-value="2048"] { background: #edc22e; color: #f9f6f2; font-size: 1.8rem; }
